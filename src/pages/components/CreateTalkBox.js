@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/CreateTalKBox.module.css'
+import styles from '../../styles/CreateTalkBox.module.css'
 
 function CreateTalkBox() {
   return (
