@@ -4,7 +4,7 @@ import React from 'react'
 import styles from '../../styles/AddJobListing.module.css'
 function AddJobListing() {
   return (
-    <div>
+    <div className={styles.body}>
         <div className={styles.navBar}>
             <Link href={''}>Back</Link>
             <label>Add Job Listing</label>
