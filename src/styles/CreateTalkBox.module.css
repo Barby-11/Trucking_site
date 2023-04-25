@@ -1,13 +1,58 @@
 .talkBoxMain{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .talkBox1{
     display: flex;
 }
+/*  */
 .label1{
     font-size: 20px;
+    margin-right: 3%;
+    font-weight: 500;
 }
+.input1{
+    padding: 0.5%;
+    width: 25%;
+    border: 2px solid #DAE0E6;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+    border-radius: 5px;
+}
+
+.label2{
+    margin-right: 5%;
+    font-weight: bold;
+}
+.label3{
+    margin-left: 5%;
+}
+.headBox1{
+    background-color: #808692;
+    padding: 1%;
+    padding-left: 5%;
+}
+.heading1{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+.headBox2{
+    background-color: #808692;
+    padding: 1%;
+    padding-left: 5%;
+}
+/*  */
+.dateBox{
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.summaryBox{
+    margin-bottom: 4%;
+    margin-top: 1%;
+}
+/*  */
 .title{
     font-weight: 700;
     font-size: 30px;
@@ -18,13 +63,9 @@
     padding-inline: 2%;
 }
 .img1{
+    margin-left: 5%;
+    margin-right: 5%;
     width: 70%;
     height: 60vh;
     padding: 1%;
-}
-.headBox1{
-    background-color: #808692;
-}
-.headBox2{
-    background-color: #808692;
 }

@@ -12,7 +12,7 @@ import Jobs from './components/jobs'
 export default function Home() {
   return (
     <div className="">
-        <CompanyProfile />
+        <CreateTalkBox />
     </div>
   )
 }
