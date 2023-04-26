@@ -6,8 +6,8 @@ import styles from '../../styles/Blog Post.module.css'
 function Reviews() {
   return (
     <Container>
-        <Text>Select Brand</Text>
-        <Box>
+        <h2>Select Brand</h2>
+       
             <Form>
                 <FormControl>
                     
@@ -20,7 +20,7 @@ function Reviews() {
                 <option>Mercedes Benz Truck</option>
             </select>
             <button className={styles.driverBtn}>Drivers</button> 
-        </Box>
+    
         <div>
             <Carousel>
                 <Carousel.Item>

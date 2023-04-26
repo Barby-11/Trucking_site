@@ -2,7 +2,9 @@ import React from 'react'
 
 function Community() {
   return (
-    <div>Community</div>
+    <div>Community
+        
+    </div>
   )
 }
 
