@@ -3,6 +3,21 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+.backBtn{
+    color:  cornflowerblue;
+    padding: 0% 1%;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: -1%;
+}
+.img1{
+    background-color: #808692;
+    margin: 2% 0%;
+    width: 100%;
+    height: 80vh;
+    padding: 10% 25%;
+    border-radius: 8px;
+}
 .talkBox1{
     display: flex;
 }
@@ -12,6 +27,7 @@
     margin-right: 3%;
     font-weight: 500;
 }
+
 .input1{
     padding: 0.5%;
     width: 25%;
@@ -21,16 +37,19 @@
 }
 
 .label2{
+    width: 20%;
+    text-align: center;
     margin-right: 5%;
     font-weight: bold;
 }
 .label3{
-    margin-left: 5%;
+    margin-right: 5%;
 }
 .headBox1{
     background-color: #808692;
     padding: 1%;
     padding-left: 5%;
+    color: #fff;
 }
 .heading1{
     font-size: 20px;
@@ -42,6 +61,14 @@
     background-color: #808692;
     padding: 1%;
     padding-left: 5%;
+    color: #fff;
+}
+.data2{
+    margin-left: 5%;
+    padding: 1% 0%;
+    background: #F9FAFC;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+    border: 2px #808692;
 }
 /*  */
 .dateBox{
@@ -56,16 +83,51 @@
 .title{
     font-weight: 700;
     font-size: 30px;
-    margin-right: 40%;
+    margin-right: 50%;
 }
 .textBox1{
     text-align: right;
     padding-inline: 2%;
 }
-.img1{
-    margin-left: 5%;
-    margin-right: 5%;
-    width: 70%;
-    height: 60vh;
-    padding: 1%;
+.addBtn{
+    width: 10%;
+    background-color: cornflowerblue;
+    padding:1%;
+    margin-top: 2%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 4px;
+    
+}
+.pubBtn{
+    background-color: cornflowerblue;
+    padding:1% 2%;
+    margin: 2% 0%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 4px;
+    align-self: center;
+    
+}
+.description{
+    padding: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    width: 100%;
+    height: 50vh;
+    border: 2px solid #DAE0E6;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+/*  */
+.imgBox2{
+    width: 100%;
+}
+.img2{
+    width: 60%;
+    height: 50vh;
+    margin: 10% 15%;
 }

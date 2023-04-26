@@ -1,9 +1,14 @@
 import React from 'react'
 import styles from '../../styles/CreateTalkBox.module.css'
+import { AddIcon } from '@chakra-ui/icons';
+import { InputGroup } from 'react-bootstrap';
+import Link from 'next/link';
 
 function CreateTalkBox() {
   return (
     <div className={styles.talkBoxMain}>
+        <Link href={''} className={styles.backBtn}>Back</Link>
+        <hr />
         <div className={styles.talkBox1}>
             <h1 className={styles.title}>ToolBox Talk</h1>
             <div className={styles.textBox1}>
@@ -11,9 +16,9 @@ function CreateTalkBox() {
                 <p>Created Sat, March, 02:00 AM (GMT+2)</p>
             </div>
         </div>
-        <img src='/images/truck7.jpg'  className={styles.img1}/>
+        <img src='/images/upload.png'  className={styles.img1}/>
+    
         <input type='file' className={styles.fileInput} />
-        {/* <i className={styles.fileArea}>📂</i> */}
         <div className={styles.dateBox}>
             <label className={styles.label1}>Date and Duration</label>
             <input type='date' className={styles.input1}/>
@@ -28,21 +33,22 @@ function CreateTalkBox() {
         </div>
         <div>
             <div className={styles.headBox1}>
-                <label className={styles.label2}>...</label>
+                {/* <label className={styles.label2}>...</label> */}
                 <label className={styles.label2}>Discussion Topic</label>
                 <label className={styles.label2} >Actions To Be taken</label>
                 <label className={styles.label2}>By</label>
             </div>
-            <div>
-                <label className={styles.label3}>...</label>
+            <div className={styles.data2}>
+                {/* <label className={styles.label3}>...</label> */}
                 <label className={styles.label3}>Discussion Topic</label>
                 <label className={styles.label3}>Actions To Be taken</label>
                 <label className={styles.label3}>All Drivers</label>
             </div>
+            <button className={styles.addBtn}>+</button>
         
             <h1 className={styles.heading1}>Addressed To</h1>
             <div className={styles.headBox2}>
-                <label className={styles.label2}>...</label>
+                {/* <label className={styles.label2}>...</label> */}
                 <label className={styles.label2}>Name</label>
                 <label className={styles.label2}>Company</label>
                 <label className={styles.label2}>signature</label>
@@ -50,8 +56,8 @@ function CreateTalkBox() {
                 <label className={styles.label2}>Time</label>
                 <label className={styles.label2}>Location</label>
             </div>
-            <div>
-                <label className={styles.label3}>...</label>
+            <div className={styles.data2}>
+                {/* <label className={styles.label3}>...</label> */}
                 <label className={styles.label3}>Zayne Malik</label>
                 <label className={styles.label3}>Canada Express Logistics</label>
                 <label className={styles.label3}>&*!@#$$</label>
@@ -59,8 +65,8 @@ function CreateTalkBox() {
                 <label className={styles.label3}>2:00 PM</label>
                 <label className={styles.label3}>Montreal</label>
             </div>
-            <div>
-                <label className={styles.label3}>...</label>
+            <div className={styles.data2}>
+                {/* <label className={styles.label3}>...</label> */}
                 <label className={styles.label3}>Zayne Malik</label>
                 <label className={styles.label3}>Canada Express Logistics</label>
                 <label className={styles.label3}>&*!@#$$</label>
@@ -68,9 +74,15 @@ function CreateTalkBox() {
                 <label className={styles.label3}>2:00 PM</label>
                 <label className={styles.label3}>Montreal</label>
             </div>
-            <button>+</button>
-            <h1 className={styles.heading1}>Body (Dscription)</h1>
-            <input type='textarea' />
+            <button className={styles.addBtn}>+</button>
+            <div>
+                <h1 className={styles.heading1}>Body (Description)</h1>
+                <input className={styles.description} type='textarea' placeholder='
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ipsum 
+                    ultricies aliquet magna amet, quam gravida ullamcorper sit. Eros vel.
+                    '/>
+                <button className={styles.pubBtn}>Publish</button>
+            </div>
         </div>
     </div>
   )

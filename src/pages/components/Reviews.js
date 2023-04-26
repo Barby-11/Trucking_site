@@ -1,13 +1,18 @@
 import Link from 'next/link';
 import React from 'react'
-import { Carousel } from 'react-bootstrap';
+import { Carousel, Container, Form, FormControl } from 'react-bootstrap';
 
 import styles from '../../styles/Blog Post.module.css'
 function Reviews() {
   return (
-    <div>
-        <h2>Select Brand</h2>
-        <div>
+    <Container>
+        <Text>Select Brand</Text>
+        <Box>
+            <Form>
+                <FormControl>
+                    
+                </FormControl>
+            </Form>
             <select type='text' className={''} >
                 <option>Mercedes Benz Truck</option>
                 <option>Mercedes Benz Truck</option>
@@ -15,7 +20,7 @@ function Reviews() {
                 <option>Mercedes Benz Truck</option>
             </select>
             <button className={styles.driverBtn}>Drivers</button> 
-        </div>
+        </Box>
         <div>
             <Carousel>
                 <Carousel.Item>
@@ -89,7 +94,7 @@ function Reviews() {
                 <label>On <Link href={''}>Mercedes-Benz Zetros</Link></label>
             </div>
         </div>
-    </div>
+    </Container>
   )
 }
 
