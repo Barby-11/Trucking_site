@@ -9,11 +9,12 @@ import Reviews from './components/Reviews'
 import SignUp from './components/Sign Up'
 import Jobs from './components/jobs'
 import JobListing from './components/JobListing'
+import AskQuestion from './components/AskQuestions'
 
 export default function Home() {
   return (
     <div >
-        <Reviews /> 
+        <AskQuestion /> 
     </div>
   )
 }
