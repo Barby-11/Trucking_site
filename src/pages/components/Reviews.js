@@ -1,73 +1,25 @@
 import Link from 'next/link';
 import React from 'react'
-import { Carousel, Container, Form, FormControl } from 'react-bootstrap';
+import { Button, Container, Flex, Select, Slider, Text } from '@chakra-ui/react';
 
-import styles from '../../styles/Blog Post.module.css'
+import styles from '../../styles/Reviews.module.css'
 function Reviews() {
   return (
-    <Container>
-        <h2>Select Brand</h2>
-       
-            <Form>
-                <FormControl>
-                    
-                </FormControl>
-            </Form>
-            <select type='text' className={''} >
+    <Container maxWidth={1000} className={styles.mainDivR}>
+        <Text p={4} fontWeight={500}>Select Brand</Text>
+         <Flex miniWidth={'max-content'} gap={2}>
+            <Select  placeholder='-Select Brand-'>
                 <option>Mercedes Benz Truck</option>
                 <option>Mercedes Benz Truck</option>
                 <option>Mercedes Benz Truck</option>
                 <option>Mercedes Benz Truck</option>
-            </select>
-            <button className={styles.driverBtn}>Drivers</button> 
-    
-        <div>
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src="holder.js/800x400?text=First slide&bg=373940"
-                    alt="First slide"
-                    />
-                    <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src="holder.js/800x400?text=Second slide&bg=282c34"
-                    alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src="holder.js/800x400?text=Third slide&bg=20232a"
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-        </div>
+            </Select>
+            <Button bg={'blue.600'} color={'#fff'} >Drivers</Button> 
+         </Flex>
+        <Slider>
+            
+        </Slider>
         <h3>Similar Trucks</h3>
-        <div>
-            <Carousel >
-
-            </Carousel>
-        </div>
         <div>
             <h3>Pinned Reviews 📌</h3>
         </div>

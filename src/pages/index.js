@@ -14,7 +14,7 @@ import AskQuestion from './components/AskQuestions'
 export default function Home() {
   return (
     <div >
-        <AskQuestion /> 
+        <Reviews/> 
     </div>
   )
 }
