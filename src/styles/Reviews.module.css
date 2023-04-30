@@ -4,14 +4,11 @@
 }
 
 /* slider box */
-.carousel{
-    display: flex;
-    background: linear-gradient(180deg, #6385FF -3.21%, #F2A8A8 71.13%);
-    padding: 5%;
-    border-radius: 8px;
-    width: 70%;
-    height: 50vh;
-    margin: 2%;
+.leftIcon{
+    margin-top: 20%;
+}
+.RightIcon{
+    margin-top: 20%;
 }
 
 /* Slider Ima5ge */
