@@ -7,7 +7,7 @@ import Link from 'next/link';
 function CreateTalkBox() {
   return (
     <div className={styles.talkBoxMain}>
-        <Link href={''} className={styles.backBtn}>Back</Link>
+        <Link href={'/'} className={styles.backBtn}>Back</Link>
         <hr />
         <div className={styles.talkBox1}>
             <h1 className={styles.title}>ToolBox Talk</h1>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 
 import styles from '../../styles/NewsArchive.module.css'
+import { SearchIcon } from '@chakra-ui/icons';
 function NewsArchive() {
   return (
     <>
@@ -14,18 +15,18 @@ function NewsArchive() {
                     <img src='/images/img4.jpg'  className={styles.img2}/>
                     <label className={styles.label2}>Black Ice in Montreal</label>
                     <p>Take caution on Montreal roads...</p>
-                    <Link href={''} className={styles.link1}>View →</Link>
+                    <Link href={'/'} className={styles.link1}>View →</Link>
                 </div>
                 <div className={styles.box1}>
                     <img src='/images/img6.jpg'  className={styles.img2}/>
                     <label className={styles.label2}>Black Ice in Montreal</label>
                     <p>Take caution on Montreal roads...</p>
-                    <Link href={''} className={styles.link1}>View →</Link>
+                    <Link href={'/'} className={styles.link1}>View →</Link>
                 </div>
                 <div className={styles.box1}>
                     <div className={styles.searchBar}>
                         <input className={styles.input1} type='text' />
-                        <i>🔍</i>
+                        <SearchIcon />
                     </div>
                     <h4 className={styles.label3}>Period</h4>
                     <label>Filter By Year</label>

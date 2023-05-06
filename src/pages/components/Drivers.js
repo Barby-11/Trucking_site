@@ -6,7 +6,7 @@ function Drivers() {
   return (
     <div className={styles.mainDiv}>
         <div className={styles.titleBox}>
-            <Link href={''} className={styles.back}>‹</Link>
+            <Link href={'/'} className={styles.back}>‹</Link>
             <label className={styles.title}>Drivers</label>
         </div>
         <hr className={styles.hori}/>   

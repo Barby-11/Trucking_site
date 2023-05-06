@@ -6,7 +6,7 @@ function BlogPost() {
   return (
     <div className={styles.body}>
          <div className={styles.titleBox}>
-            <Link href={''} className={styles.backBtn}>‹</Link>
+            <Link href={'/'} className={styles.backBtn}>‹</Link>
             <label className={styles.title}>Post</label>
         </div>
         <hr className={styles.hori}/>

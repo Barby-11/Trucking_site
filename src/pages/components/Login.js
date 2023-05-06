@@ -10,7 +10,7 @@ import styles from '../../styles/Login.module.css'
                         <h1 className={styles.title}>Sign In</h1>
                         <div className={styles.link1Box}>
                         <i class="fa-brands fa-google"></i>
-                            <Link href={''} className={styles.link1}>Sign in with google</Link>
+                            <Link href={'/'} className={styles.link1}>Sign in with google</Link>
                         </div>
                         <div className={styles.horizontal} >
                             <hr className={styles.hori1}/>

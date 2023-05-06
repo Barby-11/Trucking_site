@@ -4,8 +4,12 @@ import { Button, Center, Container, Flex, Image, Select, Box, Text } from '@chak
 
 import styles from '../../../styles/Reviews.module.css'
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from '@chakra-ui/icons';
+import ResponsiveCarousel from '../../api/Carousel/Responsive';
+import { Carousel } from 'react-responsive-carousel';
+import {items} from '../../../../public/Items.json'
 
 function Reviews() {
+const { responsive } = items;
   return (
     <Container maxWidth={1000} className={styles.mainDivR}>
        
@@ -20,68 +24,94 @@ function Reviews() {
             </Select>
             <Button bg={'blue.600'} color={'#fff'} >Drivers</Button> 
          </Flex>
-        <Center marginTop={10}>
             <Box 
-                width={1000}
+                height={{
+                    
+                  }}
+                  width={{
+                   
+                  }}
                 bg={'linear-gradient(180deg, #6385FF -3.21%, #F2A8A8 71.13%)'}
+                marginLeft={5}
+                marginRight={5}
+                marginTop={5}
                 >
-                <Flex>
-                    <ChevronLeftIcon  width={20} height={20} className={styles.leftIcon}/>                   
-                    <Image
-                        margin={10}
-                        borderRadius={100} 
-                        width={800} 
-                        height={400} 
-                        src={'/images/truck5.jpg'} />
-                    <ChevronRightIcon
-                      width={20} 
-                      height={20}
-                      className={styles.RightIcon}/>
-                </Flex>
+                <ResponsiveCarousel />
             </Box>
-        </Center>
-        <Center marginTop={-15} marginBottom={20}>
-            <Button 
+    
+            <Button
+            marginTop={-45}
+            marginLeft={20} 
+            marginRight={20} 
                 bg={'blue.600'} 
                 color={'white'} 
                 width={100} 
                 fontFamily={'Playfair Display'}
                 fontSize={20}>Rate</Button>
-        </Center>
 
         {/* Simila Trucks */}
 
         <Text fontWeight={700} fontSize={20}>Similar Trucks</Text>
-        <Flex gap={20} paddingTop={4}>
             <Box>
-                <Image borderRadius={9} width={270} height={200} src='/images/truck1.jpg' />
-                <Center>    
-                    <Button  fontFamily={'Playfair Display'} bg={'blue.800'} marginTop={-20} color={'white'}>Mercedes-Benz Aroes</Button>
-                </Center>
+                <Carousel 
+                    slidesToShow={2}
+                    margin={0}>
+                    {responsive.map((item) => (
+                        <>
+                            <Box
+                                margin={0}
+                                height={{
+                                    base: '100%', // 0-48em
+                                    md: '50%', // 48em-80em,
+                                    xl: '25%', // 80em+
+                                    }}
+                                    width={{ 
+                                        base: '100%',
+                                        md: '50%', 
+                                        sm: '25%' }}
+                                    key={item.id} className={styles.swipItem}>
+                                <Image  
+                                    margin={0}
+                                    src={item.imageUrl} 
+                                    alt="slides" />
+                                <Box 
+                                    
+                                    width={{base:"",md:"",xl:""}} 
+                                    height={{base:"",md:"",xl:""}} 
+                                    className={styles.detail}>
+                                <Text 
+                                    bg={'blue.600'}
+                                    color={'white'}
+                                    borderRadius={5} 
+                                    p={2} 
+                                    fontFamily={'Playfair Display'}
+                                    >{item.title}</Text>
+                                </Box>
+                            </Box>
+                        </>
+                        ))}
+                </Carousel>
             </Box>
-            <Box>
-                <Image borderRadius={9} width={270} height={200} src='/images/truck2.jpg' />
-                <Center>    
-                    <Button  fontFamily={'Playfair Display'} bg={'blue.800'} marginTop={-20} color={'white'}>Mercedes-Benz Aroes</Button>
-                </Center>
-            </Box>
-            <Box>
-                <Image borderRadius={9} width={270} height={200}  src='/images/truck5.jpg' />
-                <Center>    
-                    <Button  fontFamily={'Playfair Display'} bg={'blue.800'} marginTop={-20} color={'white'}>Mercedes-Benz Aroes</Button>
-                </Center>
-            </Box>
-        </Flex>
 
         {/*Pinned Reviews */}
   
-        <Text marginTop={20} fontSize={20} fontWeight={700}>Pinned Reviews</Text>
-        <Center>
-            <Flex gap={20} marginTop={20}>
+        <Text 
+            marginTop={10}
+            marginBottom={10}
+            fontSize={20} 
+            fontWeight={700}
+            >Pinned Reviews</Text>
+            <Box 
+                className={styles.pinnedReviwes}
+                display={{base:"grid",md:"grid",xl:"flex"}}
+                gap={10}>
+
                 <Box 
                     width={250}
                     bg={'#E6F3FF'} 
                     padding={5} borderRadius={8}  
+                    marginTop={10}
+                    marginBottom={10}
                     border={ '1px solid #EFEFF0'}
                     boxShadow={" 0px 2px 4px rgba(0, 0, 0, 0.15)"}>
                     <Flex>
@@ -105,7 +135,9 @@ function Reviews() {
                 <Box 
                     width={250}
                     bg={'#E6F3FF'} 
-                    padding={5} borderRadius={8}  
+                    padding={5} borderRadius={8}
+                    marginTop={10}
+                    marginBottom={10}  
                     border={ '1px solid #EFEFF0'}
                     boxShadow={" 0px 2px 4px rgba(0, 0, 0, 0.15)"}>
                     <Flex>
@@ -129,7 +161,9 @@ function Reviews() {
                 <Box 
                     width={250}
                     bg={'#E6F3FF'} 
-                    padding={5} borderRadius={8}  
+                    padding={5} borderRadius={8} 
+                    marginTop={10}
+                    marginBottom={10} 
                     border={ '1px solid #EFEFF0'}
                     boxShadow={" 0px 2px 4px rgba(0, 0, 0, 0.15)"}>
                     <Flex>
@@ -150,8 +184,7 @@ function Reviews() {
                         <Text fontWeight={600}>On <Link color={''}  href={''}>Mercedes-Benz Zetros</Link></Text>
                     </Center>
                 </Box>
-            </Flex>
-        </Center>
+            </Box>
     </Container>
   )
 }

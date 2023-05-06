@@ -76,10 +76,8 @@
     margin-top: 2%;
 }
 .subBox1{
-    display: flex;
     padding: 3%;
     height: 25vh;
-    width: 100%;
     border: 2px solid #DAE0E6;
     margin-top: 1%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12); 
@@ -87,7 +85,6 @@
 }
 .subBox1A{
     width: 40%;
-    
 }
 .text1B{
     margin-left: 11%;

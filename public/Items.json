@@ -1,0 +1,37 @@
+
+    {
+        "items": {
+          "bootstrap": [
+           
+          ],
+          "elastic": [
+        
+          ],
+          "responsive": [
+            {
+              "id": 1,
+              "title": "Mercedse-Benz Zetros",
+              "imageUrl": "/images/truck1.jpg" },
+            {
+              "id": 2,
+              "title": "Mercedse-Benz Aroes",
+              "imageUrl": "/images/truck5.jpg" },
+            {
+              "id": 3,
+              "title": "Mercedse-Benz ",
+              "imageUrl": "/images/truck4.webp" },
+            {
+              "id": 4,
+              "title": "Mercedse-Benz Zetros",
+              "imageUrl": "/images/truck4.jpg"
+            },
+            {
+              "id": 5,
+              "title": "Mercedse-Benz Aroes",
+              "imageUrl": "/images/truck7.jpg"
+            }
+          ]
+        }
+      }
+  
+  

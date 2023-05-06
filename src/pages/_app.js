@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+// import '@/styles/globals.css'
 import 'react-bootstrap'
 import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }) {
