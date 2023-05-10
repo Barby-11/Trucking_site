@@ -13,7 +13,8 @@ export default function Navbar() {
             <Link href={"/components/NewsArchive"}>News Archive</Link>
             <Link href={"/components/AskQuestions"}>Ask Questions</Link>
             <Link href={"/components/BlogPost"}>Blog Post</Link>
-            <Link href={"/components/BlogPost"}>Blog Post</Link>
+            <Link href={"/components/SignUp"}>Sign Up</Link>
+            <Link href={"/components/LogIn"}>LogIn</Link>
             <Link href={"/components/Reviews/Reviews"}>Reviews</Link>
         </Flex>
     </Nav>
