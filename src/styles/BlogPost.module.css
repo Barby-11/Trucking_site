@@ -1,0 +1,28 @@
+.whatsApp{
+    height: 10vh;
+    top: 5%;
+    left: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0.2%;
+    
+}
+.linkedIn{
+    height: 10vh;
+    background-color:white;
+    border-radius: 8px;
+    padding: 0.2%;
+}
+.instagram{
+    height: 10vh;
+    background-color:#fff;
+    border-radius: 8px;
+    padding: 0.2%;
+}
+.facebook{
+    height: 10vh;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0.2%;
+}
+/*  */

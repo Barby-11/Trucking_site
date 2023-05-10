@@ -1,29 +1,31 @@
 import React from 'react'
 
-import styles from '../../styles/Blog Post.module.css'
+import styles from '../../styles/BlogPost.module.css'
 import Link from 'next/link';
+import { Box, Image, Text } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
 function BlogPost() {
   return (
-    <div className={styles.body}>
-         <div className={styles.titleBox}>
-            <Link href={'/'} className={styles.backBtn}>‹</Link>
-            <label className={styles.title}>Post</label>
-        </div>
+    <Box marginLeft={{base:"5%",md:"",xl:"5%"}} marginTop={5} marginBottom={1} marginRight={{base:"5%",md:"",xl:"5%"}}>
+         <Box display={'flex'}>
+            <Link href={'/'} className={styles.backBtn}><ArrowBackIcon marginTop={2} fontSize={25} fontWeight={500} color={'blue.500'} padding={1}/></Link>
+            <Text fontSize={25} fontWeight={500}>Post</Text>
+        </Box>
         <hr className={styles.hori}/>
-        <h3 className={styles.heading}>San Francisco Scorching Sun</h3>
-        <div className={styles.container}>
-            <img src='/images/img8.jpg' className={styles.img1}/>
-            <div className={styles.socials}>
-                <img src='/images/whatsapp.png' className={styles.whatsApp}/>
+        <Text fontWeight={700}>San Francisco Scorching Sun</Text>
+        <Box display={{base:"flex",md:"",xl:"flex"}}>
+            <Image src='/images/Img8.jpg' width={{base:"",md:"",xl:"100%"}} height={{base:"",md:"",xl:"70vh"}}/>
+            <Box padding={2} marginLeft={{base:"-20%",md:"",xl:"0%"}} >
+                <Image src='/images/whatsapp.png' className={styles.whatsApp}/>
                 <br/>
-                <img src='/images/in.png'  className={styles.linkedIn}/>
+                <Image src='/images/in.png'  className={styles.linkedIn}/>
                 <br/>
-                <img src='/images/insta.png'  className={styles.instagram}/>
+                <Image src='/images/insta.png'  className={styles.instagram}/>
                 <br/>
-                <img src='/images/fb.png'  className={styles.facebook}/>
-            </div>
-        </div>
-        <p className={styles.paragraph}>The SFMTA has also reminded truck drivers to be aware of the signs 
+                <Image src='/images/fb.png'  className={styles.facebook}/>
+            </Box>
+        </Box>
+        <Text fontSize={{base:"15px",md:"15pxx",xl:"20px"}} textAlign={'justify'} width={{base:"",md:"",xl:"93%"}} >The SFMTA has also reminded truck drivers to be aware of the signs 
             and symptoms of heat exhaustion and heatstroke. These can include 
             headaches, dizziness, nausea, fatigue, and confusion. If a driver 
             experiences any of these symptoms, they should immediately stop 
@@ -42,8 +44,8 @@ function BlogPost() {
             areas, and being aware of the signs of heat-related illnesses. By following 
             these guidelines, truck drivers can help ensure their safety and the safety 
             of others on the road.
-        </p>
-        <p className={styles.paragraph}>
+        </Text>
+        <Text fontSize={{base:"15px",md:"15pxx",xl:"20px"}} textAlign={'justify'} width={{base:"",md:"",xl:"93%"}}>
             San Francisco is known for its cool, foggy weather, but in recent years, 
             the city has experienced occasional heatwaves. These heatwaves can be dangerous, 
             especially for truck drivers who spend long hours on the road. The scorching 
@@ -63,8 +65,8 @@ function BlogPost() {
             and to avoid leaving their vehicles in direct sunlight. They have also 
             recommended that drivers use sunshades to block out the sun's rays and keep 
             the interior of their vehicles cool.
-        </p>
-    </div>
+        </Text>
+    </Box>
   )
 }
 

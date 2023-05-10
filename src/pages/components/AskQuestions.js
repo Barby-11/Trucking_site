@@ -2,27 +2,32 @@ import React from 'react'
 import {  ChatIcon, EditIcon, ExternalLinkIcon, LinkIcon, PlusSquareIcon, WarningIcon } from '@chakra-ui/icons'
 
 import styles from '../../styles/AskQuestions.module.css'
-import { Box, Flex, Image, Input, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Image, Input, Text } from '@chakra-ui/react';
 function AskQuestion() {
   return (
-    <div className={styles.mainBody}>
-        <div className={styles.box0}>
+    <Box 
+        marginLeft={{base:'1%',md:'2%',xl:'10%'}} 
+        marginRight={{base:'1%',md:'2%',xl:'10%'}} 
+        marginTop={{base:'1%',md:'2%',xl:'2%'}} 
+        
+        className={styles.mainBod}>
+        <Box className={styles.box0}>
             <Box className={styles.box1}>
               <h1 className={styles.heading1}>Community</h1>
               <p>Find answers, ask questions, and connect with our community around the world.</p>
               <Box className={styles.iconBar}>
-                  <div className={styles.icon1}>
+                  <Box className={styles.icon1}>
                     <ChatIcon width={6} />
                     <Text>Topic</Text>
-                  </div>
-                  <div className={styles.icon2}>
+                  </Box>
+                  <Box className={styles.icon2}>
                     <ChatIcon width={6} />
                     <Text>Other</Text>
-                  </div>
-                  <div className={styles.icon3}>
+                  </Box>
+                  <Box className={styles.icon3}>
                     <ChatIcon width={6} />
                     <Text>Members</Text>
-                  </div>
+                  </Box>
               </Box>
       
             </Box>
@@ -38,25 +43,29 @@ function AskQuestion() {
               <LinkIcon width={10} height={6} />
             </Flex>
             <Flex gap={2} className={styles.box3}>
-              <div className={styles.ask}>
+              <Box className={styles.ask}>
                 <ChatIcon  width={6}/>
                 <Text >Ask Truckers</Text>
-              </div>
-              <div className={styles.answer}>
+              </Box>
+              <Box className={styles.answer}>
                 <EditIcon  width={6}/>
                 <Text textAlign={'center'}>Answer</Text>
-              </div>
-              <div className={styles.post}>
+              </Box>
+              <Box className={styles.post}>
                 <ExternalLinkIcon  width={6}/>
                 <Text>Post</Text>
-              </div>
+              </Box>
             </Flex>
-        </div>
+        </Box>
         
-        {/*  */}
-        <Box display={{base:"grid",md:"grid",xl:"flex"}} className={styles.contentBox}>
+        {/* Frequent asked Questions  */}
+        <h2 className={styles.heading2}>Frequently Asked</h2>
+        <Box 
+            display={{base:"grid",md:"grid",xl:"flex"}} 
+            gap={{base:'',md:'',xl:'10'}}
+            className={styles.contentBox}>
+
           <Box className={styles.contentBox1}>
-            <h2 className={styles.heading2}>Frequently Asked</h2>
             <Box display={'flex'} gap={2} className={styles.subBox1}>
                 <Box display={'grid'}>
                   <Flex>
@@ -69,7 +78,7 @@ function AskQuestion() {
                   <Text className={styles.textA}>1</Text>
                   <Text className={styles.textB}>Topic</Text>
                 </Box>
-                <div className={styles.vertical}></div>
+                <Box className={styles.vertical}></Box>
                 <Box className={styles.RepliesCount}>
                   <Box className={styles.textA}>0</Box>
                   <Box className={styles.textB}>Replies</Box>
@@ -83,114 +92,129 @@ function AskQuestion() {
                 </Flex>
             </Box>
           </Box>
-          <div className={styles.contentBox2}>
-          <h2 className={styles.heading3}>Recent Topics</h2>
+
+          {/* Recent Topics */}
+          <Box width={{base:'100%',md:'100%',xl:'fit-content'}} className={styles.contentBox2}>
+           <Center>
+              <Text fontWeight={600}>Recent Topics</Text>
+            </Center> 
               <li>How long is free trail</li>
-              <label className={styles.textC}>3 days, 5 hours ago</label>
+              <Text className={styles.textC}>3 days, 5 hours ago</Text>
               <li>How long is free trail</li>
-              <label className={styles.textC}>3 days, 5 hours ago</label>
+              <Text className={styles.textC}>3 days, 5 hours ago</Text>
               <li>How long is free trail</li>
-              <label className={styles.textC}>3 days, 5 hours ago</label>
-          </div>
+              <Text className={styles.textC}>3 days, 5 hours ago</Text>
+          </Box>
         </Box>
-        <div className={styles.contentBox}>
-          <div className={styles.contentBox1}>
-            <h2 className={styles.heading2}>Community</h2>
-            <div className={styles.subBox1}>
-                <div className={styles.subBox1A}>
-                  <ChatIcon marginEnd={2} width={6} />
-                  <label>How long is the free trial ?</label>
-                  <br />
-                  <label className={styles.text1B}>How long is the free rial period ?</label>
-                </div>
-                <div className={styles.topicCount}>
-                  <label className={styles.textA}>1</label>
-                  <br />
-                  <label className={styles.textB}>Topic</label>
-                </div>
-                <div className={styles.vertical}></div>
-                <div className={styles.RepliesCount}>
-                  <label className={styles.textA}>0</label>
-                  <br />
-                  <label className={styles.textB}>Replies</label>
-                </div>
-                <div className={styles.subBox1B}>
-                  <img src='/images/john doe.jpg' className={styles.img1} />
-                  <div className={styles.nameBox2}>
-                      <label className={styles.nameText2} >Sandala Barby</label>
-                      <br />
-                      <label className={styles.textB}>3 Days, 5 hours ago</label>
-                  </div>
-                </div>
-            </div>
-          </div>
-          <div className={styles.contentBox2}>
-            <h2 className={styles.heading3}>Stats</h2>
-            <label className={styles.label3}>Registerd Users</label><label>23</label>
-            <br />
-            <label className={styles.label3}>Topics</label><span className={styles.tab}></span><label>13</label>
-            <br />
-            <label className={styles.label3}>Replies</label> <span className={styles.tab}></span><label>2</label>
-          </div>
-        </div>
-        <div className={styles.contentBox1}>
-            <h2 className={styles.heading2}>Informative</h2>
-            <div className={styles.subBox1}>
-                <div className={styles.subBox1A}>
-                  <ChatIcon marginEnd={2} width={6} />
-                  <label>How long is the free trial ?</label>                                                  
-                  <br />
-                  <label className={styles.text1B}>How long is the free rial period ?</label>
-                </div>
-                <div className={styles.topicCount}>
-                  <label className={styles.textA}>1</label>
-                  <br />
-                  <label className={styles.textB}>Topic</label>
-                </div>
-                <div className={styles.vertical}></div>
-                <div className={styles.RepliesCount}>
-                  <label className={styles.textA}>0</label>
-                  <br />
-                  <label className={styles.textB}>Replies</label>
-                </div>
-                <div className={styles.subBox1B}>
-                  <img src='/images/john doe.jpg' className={styles.img1} />
-                  <div className={styles.nameBox2}>
-                      <label className={styles.nameText2} >Sandala Barby</label>
-                      <br />
-                      <label className={styles.textB}>3 Days, 5 hours ago</label>
-                  </div>
-                </div>
-            </div>
-            <div className={styles.subBox1}>
-                <div className={styles.subBox1A}>
-                  <ChatIcon marginEnd={2} width={6} />
-                  <label>How long is the free trial ?</label>
-                  <br />
-                  <label className={styles.text1B}>How long is the free rial period ?</label>
-                </div>
-                <div className={styles.topicCount}>
-                  <label className={styles.textA}>1</label>
-                  <br />
-                  <label className={styles.textB}>Topic</label>
-                </div>
-                <div className={styles.vertical}></div>
-                <div className={styles.RepliesCount}>
-                  <label className={styles.textA}>0</label>
-                  <br />
-                  <label className={styles.textB}>Replies</label>
-                </div>
-                <div className={styles.subBox1B}>
-                  <img src='/images/john doe.jpg' className={styles.img1} />
-                  <div className={styles.nameBox2}>
-                      <label className={styles.nameText2} >Sandala Barby</label>
-                      <br />
-                      <label className={styles.textB}>3 Days, 5 hours ago</label>
-                  </div>
-                </div>
-            </div>
-          </div>
-    </div>
+
+        {/* community */}
+        <Text className={styles.heading2}>Community</Text>
+        <Box className={styles.contentBox}>
+          <Box  
+              display={{base:'grid',md:'grid',xl:'flex'}}
+              gap={{base:'',md:'',xl:'10'}}
+              className={styles.contentBox1}>
+            <Flex 
+                width={{base:'100%',md:'100%',xl:'fit-content'}} 
+                className={styles.subBox1}>
+                <Box className={styles.subBox1A}>
+                  <Flex>
+                    <ChatIcon marginEnd={2} width={6} />
+                    <Text fontWeight={'bold'}>How long is the free trial ?</Text>
+                  </Flex>
+                  <Text >How long is the free trial period ?</Text>
+                </Box>
+                <Box className={styles.topicCount}>
+                  <Text className={styles.textA}>1</Text>
+                  <Text className={styles.textB}>Topic</Text>
+                </Box>
+                <Box className={styles.vertical}></Box>
+                <Box className={styles.RepliesCount}>
+                  <Text className={styles.textA}>0</Text>
+                  <Text className={styles.textB}>Replies</Text>
+                </Box>
+                <Flex className={styles.subBox1B}>
+                  <Image src='/images/john doe.jpg' className={styles.img1} />
+                  <Box className={styles.nameBox2}>
+                      <Text className={styles.nameText2} >Sandala Barby</Text>
+                      <Text className={styles.textB}>3 Days, 5 hours ago</Text>
+                  </Box>
+                </Flex>
+            </Flex>
+            <Box 
+                width={{base:'60%',md:'60%',xl:'fit-content'}}
+                className={styles.contentBox2}>
+              <Center>
+                <Text className={styles.heading3}>Stats</Text>
+              </Center>
+              <Flex gap={100}>
+                <Text >Registerd Users</Text><Text>23</Text>
+              </Flex>
+              <Flex gap={170}>
+                <Text >Topics</Text><Text>13</Text>
+              </Flex>
+              <Flex gap={170}>
+                <Text >Replies</Text><Text>2</Text>
+              </Flex>
+            </Box>
+          </Box>
+        </Box>
+        <Box 
+            width={{base:'100%',md:'100%',xl:'80%'}}
+            className={styles.contentBox1}>
+            <Text className={styles.heading2}>Informative</Text>
+            <Flex  className={styles.subBox1}>
+                <Box className={styles.subBox1A}>
+                 <Flex>
+                    <ChatIcon marginEnd={2} width={6} />
+                    <Text fontWeight={'bold'}>How long is the free trial ?</Text>
+                  </Flex>                                                  
+                  <Text >How long is the free rial period ?</Text>
+                </Box>
+                <Box className={styles.topicCount}>
+                  <Text className={styles.textA}>1</Text>
+                  <Text className={styles.textB}>Topic</Text>
+                </Box>
+                <Box className={styles.vertical}></Box>
+                <Box className={styles.RepliesCount}>
+                  <Text className={styles.textA}>0</Text>
+                  <Text className={styles.textB}>Replies</Text>
+                </Box>
+                <Flex className={styles.subBox1B}>
+                  <Image src='/images/john doe.jpg' className={styles.img1} />
+                  <Box className={styles.nameBox2}>
+                      <Text className={styles.nameText2} >Sandala Barby</Text>
+                      <Text className={styles.textB}>3 Days, 5 hours ago</Text>
+                  </Box>
+                </Flex>
+            </Flex>
+            <Flex className={styles.subBox1}>
+                <Box className={styles.subBox1A}>
+                  <Flex>
+                    <ChatIcon marginEnd={2} width={6} />
+                    <Text fontWeight={'bold'}>How long is the free trial ?</Text>
+                  </Flex>
+                  <Text>How long is the free rial period ?</Text>
+                </Box>
+                <Box className={styles.topicCount}>
+                  <Text className={styles.textA}>1</Text>
+                  <Text className={styles.textB}>Topic</Text>
+                </Box>
+                <Box className={styles.vertical}></Box>
+                <Box className={styles.RepliesCount}>
+                  <Text className={styles.textA}>0</Text>
+                  <Text className={styles.textB}>Replies</Text>
+                </Box>
+                <Box className={styles.subBox1B}>
+                  <Image src='/images/john doe.jpg' className={styles.img1} />
+                  <Box className={styles.nameBox2}>
+                      <Text className={styles.nameText2} >Sandala Barby</Text>
+                      <Text className={styles.textB}>3 Days, 5 hours ago</Text>
+                  </Box>
+                </Box>
+            </Flex>
+          </Box>
+    </Box>
   )
 }
 
