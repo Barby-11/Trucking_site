@@ -2,21 +2,23 @@ import Link from "next/link";
 import { Button, Container, Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 
 import styles from '../../styles/Login.module.css'
+import { Box, Image, Text } from "@chakra-ui/react";
+import { Google } from "react-bootstrap-icons";
  export default function Login() {
     return(
         <>
-            <div className={styles.mainBox}>
-                <div  className={styles.container}>
-                        <h1 className={styles.title}>Sign In</h1>
-                        <div className={styles.link1Box}>
-                        <i class="fa-brands fa-google"></i>
+            <Box className={styles.mainBox}>
+                <Box  className={styles.container}>
+                        <Text className={styles.title}>Sign In</Text>
+                        <Box className={styles.link1Box}>
+                        <Google />
                             <Link href={'/'} className={styles.link1}>Sign in with google</Link>
-                        </div>
-                        <div className={styles.horizontal} >
+                        </Box>
+                        <Box className={styles.horizontal} >
                             <hr className={styles.hori1}/>
                             <Link href={''}>Sign in with your email</Link>
                             <hr className={styles.hori2}/>
-                        </div>
+                        </Box>
                         <Form className="">
                             <FormGroup className={styles.group}>
                                 <FormLabel className={styles.label}>Email Address</FormLabel>
@@ -28,22 +30,22 @@ import styles from '../../styles/Login.module.css'
                                 <br />
                                 <FormControl className={styles.input2}type="password"/>
                             </FormGroup>
-                            <div className={styles.group2}>
+                            <Box className={styles.group2}>
                                 <FormControl type="checkbox" className={styles.check} />
                                 <FormLabel className={styles.label2}>keep me signed in</FormLabel>
                                 <Link href={"#"} className={styles.link2}>forgot password?</Link>
-                            </div>
+                            </Box>
                             <Button type="submit" className={styles.loginBtn}>Sign In</Button>
-                            <div className={styles.group3}>
-                                <p>Dont have an account? </p>
+                            <Box className={styles.group3}>
+                                <Text>Dont have an account? </Text>
                                 <Link href={''} className={styles.link3}>Register</Link>
-                            </div>
+                            </Box>
                         </Form>
-                </div>
-                <div>
-                    <img className={styles.img1} src="/images/bg1.png" alt="image 1" />
-                </div>
-            </div>
+                </Box>
+                <Box display={{base:"none",md:"none",xl:""}}>
+                    <Image  className={styles.img1} src="/images/bg1.png" alt="image 1" />
+                </Box>
+            </Box>
         </>
     )
  }

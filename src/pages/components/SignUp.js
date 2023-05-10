@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button,  Form, FormControl, FormGroup, FormLabel } from "react-bootstrap";
 
-import styles from '../../styles/SigUp.module.css'
+import styles from '../../styles/SignUp.module.css'
 import { Box, Image, Select, Text } from "@chakra-ui/react";
  const SignUp =()=> {
     return(
